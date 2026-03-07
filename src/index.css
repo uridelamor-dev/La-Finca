@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @apply bg-off-white text-charcoal font-sans antialiased;
+  background-image: linear-gradient(180deg, rgba(246, 241, 232, 0.95), rgba(233, 221, 201, 0.9));
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  @apply text-charcoal;
+}
+
+::selection {
+  background: rgba(196, 154, 87, 0.35);
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 8px;
+  background: #1e1b18;
+  color: #f6f1e8;
+  padding: 10px 16px;
+  border-radius: 999px;
+  z-index: 60;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.skip-link:focus {
+  left: 16px;
+}
+
+input,
+textarea,
+select {
+  @apply text-sm;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid rgba(196, 154, 87, 0.6);
+  outline-offset: 2px;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-charcoal px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-off-white transition hover:-translate-y-0.5 hover:bg-night-blue;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-charcoal/30 px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-charcoal transition hover:-translate-y-0.5 hover:border-charcoal;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-off-white/60 px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-off-white transition hover:-translate-y-0.5 hover:border-off-white;
+  }
+
+  .section-title {
+    @apply text-xs uppercase tracking-[0.3em] text-olive;
+  }
+
+  .headline {
+    @apply font-serif text-4xl font-semibold leading-tight md:text-5xl lg:text-6xl;
+  }
+
+  .card-soft {
+    @apply rounded-[28px] border border-charcoal/10 bg-off-white/85 p-6 shadow-soft backdrop-blur transition hover:-translate-y-1;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full border border-charcoal/20 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-charcoal/70;
+  }
+
+  .glass {
+    @apply rounded-[28px] border border-white/40 bg-white/25 backdrop-blur;
+  }
+
+  .nav-link {
+    @apply text-sm uppercase tracking-[0.2em] text-charcoal/75 transition hover:text-charcoal;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-ghost {
+    transition: none;
+  }
+}
