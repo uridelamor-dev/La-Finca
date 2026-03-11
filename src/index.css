@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "TAN Tangkiwood";
+  src: url("/src/assets/fonts/TAN-Tangkiwood-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   color-scheme: light;
 }
@@ -12,7 +20,7 @@
 
 body {
   @apply bg-off-white text-charcoal font-sans antialiased;
-  background-image: linear-gradient(180deg, rgba(246, 241, 232, 0.95), rgba(233, 221, 201, 0.9));
+  background-image: linear-gradient(180deg, rgba(251, 251, 239, 0.98), rgba(229, 226, 217, 0.95));
   min-height: 100vh;
 }
 
@@ -26,15 +34,15 @@ a {
 }
 
 ::selection {
-  background: rgba(196, 154, 87, 0.35);
+  background: rgba(214, 110, 39, 0.25);
 }
 
 .skip-link {
   position: absolute;
   left: -999px;
   top: 8px;
-  background: #1e1b18;
-  color: #f6f1e8;
+  background: #2b3210;
+  color: #fbfbef;
   padding: 10px 16px;
   border-radius: 999px;
   z-index: 60;
@@ -58,21 +66,49 @@ textarea:focus-visible,
 select:focus-visible,
 button:focus-visible,
 a:focus-visible {
-  outline: 2px solid rgba(196, 154, 87, 0.6);
+  outline: 2px solid rgba(214, 110, 39, 0.55);
   outline-offset: 2px;
 }
 
 @layer components {
+  .burger-button {
+    @apply relative flex h-11 w-11 items-center justify-center rounded-full border border-charcoal/20 bg-off-white/90 transition;
+  }
+
+  .burger-line {
+    @apply absolute h-[2px] w-5 bg-charcoal transition;
+  }
+
+  .burger-line:nth-child(1) {
+    transform: translateY(-6px);
+  }
+
+  .burger-line:nth-child(3) {
+    transform: translateY(6px);
+  }
+
+  .burger-button:hover .burger-line:nth-child(1) {
+    transform: translateY(-5px);
+  }
+
+  .burger-button:hover .burger-line:nth-child(3) {
+    transform: translateY(5px);
+  }
+
+  .burger-button:hover .burger-line:nth-child(2) {
+    transform: scaleX(0.92);
+  }
+
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-charcoal px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-off-white transition hover:-translate-y-0.5 hover:bg-night-blue;
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-charcoal px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-off-white transition hover:-translate-y-0.5 hover:bg-olive;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-charcoal/30 px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-charcoal transition hover:-translate-y-0.5 hover:border-charcoal;
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-charcoal/30 px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-charcoal transition hover:-translate-y-0.5 hover:border-charcoal;
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-off-white/60 px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-off-white transition hover:-translate-y-0.5 hover:border-off-white;
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-off-white/60 px-6 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-off-white transition hover:-translate-y-0.5 hover:border-off-white;
   }
 
   .section-title {
@@ -80,11 +116,19 @@ a:focus-visible {
   }
 
   .headline {
-    @apply font-serif text-4xl font-semibold leading-tight md:text-5xl lg:text-6xl;
+    @apply font-serif text-4xl font-semibold leading-[1.4] md:text-5xl lg:text-6xl;
+  }
+
+  .brand-title {
+    @apply font-serif font-semibold leading-[1.4] tracking-[-0.04em];
+  }
+
+  .brand-lower {
+    @apply font-serif lowercase tracking-[-0.03em];
   }
 
   .card-soft {
-    @apply rounded-[28px] border border-charcoal/10 bg-off-white/85 p-6 shadow-soft backdrop-blur transition hover:-translate-y-1;
+    @apply rounded-[26px] border border-charcoal/10 bg-off-white/90 p-6 shadow-soft backdrop-blur transition hover:-translate-y-1;
   }
 
   .chip {
@@ -92,11 +136,11 @@ a:focus-visible {
   }
 
   .glass {
-    @apply rounded-[28px] border border-white/40 bg-white/25 backdrop-blur;
+    @apply rounded-[26px] border border-white/40 bg-white/30 backdrop-blur;
   }
 
   .nav-link {
-    @apply text-sm uppercase tracking-[0.2em] text-charcoal/75 transition hover:text-charcoal;
+    @apply text-sm uppercase tracking-[0.22em] text-charcoal/75 transition hover:text-charcoal;
   }
 
   .reveal {

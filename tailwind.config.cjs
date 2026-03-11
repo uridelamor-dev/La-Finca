@@ -4,29 +4,30 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        sand: "#E9DDC9",
-        "off-white": "#F6F1E8",
-        terracotta: "#B86E4B",
-        olive: "#65725B",
-        charcoal: "#1E1B18",
-        "old-gold": "#C49A57",
-        "night-blue": "#243746",
+        sand: "#E5E2D9",
+        "off-white": "#FBFBEF",
+        terracotta: "#D66E27",
+        olive: "#505631",
+        charcoal: "#2B3210",
+        "old-gold": "#D6E2E7",
+        "night-blue": "#2B3210",
       },
       fontFamily: {
-        serif: ["'Fraunces'", "serif"],
+        serif: ["'TAN Tangkiwood'", "serif"],
         sans: ["Manrope", "system-ui", "sans-serif"],
+        script: ["Allura", "cursive"],
       },
       letterSpacing: {
         wide2: "0.18em",
       },
       boxShadow: {
-        soft: "0 12px 32px rgba(30, 27, 24, 0.08)",
-        glow: "0 0 0 1px rgba(196, 154, 87, 0.18), 0 24px 60px rgba(30, 27, 24, 0.22)",
+        soft: "0 10px 24px rgba(43, 50, 16, 0.08)",
+        glow: "0 0 0 1px rgba(214, 110, 39, 0.18), 0 20px 50px rgba(43, 50, 16, 0.25)",
       },
       backgroundImage: {
-        "sunset-gradient": "linear-gradient(120deg, rgba(246, 241, 232, 0.9), rgba(184, 110, 75, 0.85), rgba(36, 55, 70, 0.85))",
-        "garden-texture": "radial-gradient(circle at 30% 20%, rgba(255,255,255,0.35), transparent 55%), radial-gradient(circle at 80% 10%, rgba(196,154,87,0.2), transparent 45%), linear-gradient(160deg, rgba(233,221,201,0.95), rgba(246,241,232,0.92))",
-        "festival-glow": "radial-gradient(circle at 20% 10%, rgba(196,154,87,0.22), transparent 45%), radial-gradient(circle at 80% 0%, rgba(184,110,75,0.28), transparent 55%), linear-gradient(160deg, rgba(30,27,24,0.95), rgba(36,55,70,0.9))",
+        "sunset-gradient": "linear-gradient(120deg, rgba(251, 251, 239, 0.92), rgba(214, 110, 39, 0.82), rgba(43, 50, 16, 0.85))",
+        "garden-texture": "radial-gradient(circle at 30% 20%, rgba(255,255,255,0.35), transparent 55%), radial-gradient(circle at 80% 10%, rgba(214,110,39,0.18), transparent 45%), linear-gradient(160deg, rgba(251,251,239,0.98), rgba(229,226,217,0.95))",
+        "festival-glow": "radial-gradient(circle at 20% 10%, rgba(214,110,39,0.22), transparent 45%), radial-gradient(circle at 80% 0%, rgba(80,86,49,0.35), transparent 55%), linear-gradient(160deg, rgba(43,50,16,0.95), rgba(43,50,16,0.9))",
       },
     },
   },

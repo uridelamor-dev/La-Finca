@@ -14,7 +14,7 @@ const locales = {
     hero: {
       location: "Costa Brava · Blanes",
       title: "LA FINCA.",
-      tagline: "Where summer begins late.",
+      tagline: "",
       support: "[ mediterranean garden festival ]",
 
       subtitle:
@@ -367,7 +367,7 @@ const locales = {
       subtitle: "Core colors, typography, buttons and cards used across the site.",
       typography: {
         title: "Typography",
-        serif: "Cormorant Garamond",
+        serif: "DM Serif Display",
         sans: "Manrope for body and UI",
         tracking: "Tracking example",
       },
@@ -507,7 +507,7 @@ const locales = {
       location: "Blanes · Costa Brava",
       explore: "Explore",
       inquiries: "Inquiries",
-      copyright: "© 2026 LA FINCA. Where summer begins late.",
+      copyright: "© 2026 LA FINCA.",
     },
     labels: {
       reserve: "Reserve",
@@ -533,8 +533,8 @@ const locales = {
       location: "Costa Brava · Blanes",
       title: "LA FINCA.",
       subtitle:
-        "Donde el verano empieza tarde. Una finca mediterránea para tardes doradas y festivales nocturnos.",
-      tagline: "Donde el verano empieza tarde.",
+        "Un espacio donde el verano, la música y la compañía se unen para crear recuerdos.",
+      tagline: "",
       support: "[ mediterranean garden festival ]",
 
       ctaPrimary: "Ver Agenda",
@@ -885,7 +885,7 @@ const locales = {
       subtitle: "Colores, tipografías, botones y cards del sitio.",
       typography: {
         title: "Tipografía",
-        serif: "Cormorant Garamond",
+        serif: "DM Serif Display",
         sans: "Manrope para cuerpo y UI",
         tracking: "Ejemplo de tracking",
       },
@@ -1025,7 +1025,7 @@ const locales = {
       location: "Blanes · Costa Brava",
       explore: "Explorar",
       inquiries: "Consultas",
-      copyright: "© 2026 LA FINCA. Donde el verano empieza tarde.",
+      copyright: "© 2026 LA FINCA. ",
     },
     labels: {
       reserve: "Reservar",
@@ -1052,7 +1052,7 @@ const locales = {
       title: "LA FINCA.",
       subtitle:
         "On l'estiu comença tard. Una finca mediterrània per a tardes daurades i festivals nocturns.",
-      tagline: "On l'estiu comença tard.",
+      tagline: "",
       support: "[ mediterranean garden festival ]",
 
       ctaPrimary: "Veure Agenda",
@@ -1403,7 +1403,7 @@ const locales = {
       subtitle: "Colors, tipografies, botons i cards del lloc.",
       typography: {
         title: "Tipografia",
-        serif: "Cormorant Garamond",
+        serif: "DM Serif Display",
         sans: "Manrope per a cos i UI",
         tracking: "Exemple de tracking",
       },
@@ -1543,7 +1543,7 @@ const locales = {
       location: "Blanes · Costa Brava",
       explore: "Explorar",
       inquiries: "Consultes",
-      copyright: "© 2026 LA FINCA. On l'estiu comença tard.",
+      copyright: "© 2026 LA FINCA.",
     },
     labels: {
       reserve: "Reservar",
@@ -1556,13 +1556,11 @@ const locales = {
 };
 
 export const palette = [
-  { name: "Off White", value: "#F6F1E8" },
-  { name: "Warm Sand", value: "#E9DDC9" },
-  { name: "Terracotta", value: "#B86E4B" },
-  { name: "Olive Green", value: "#65725B" },
-  { name: "Charcoal", value: "#1E1B18" },
-  { name: "Night Blue", value: "#243746" },
-  { name: "Old Gold", value: "#C49A57" },
+  { name: "Off White", value: "#FBFBEF" },
+  { name: "Warm Sand", value: "#E5E2D9" },
+  { name: "Terracotta", value: "#D66E27" },
+  { name: "Olive Green", value: "#505631" },
+  { name: "Charcoal", value: "#2B3210" },
 ];
 
 export const getLocaleData = (language) => {

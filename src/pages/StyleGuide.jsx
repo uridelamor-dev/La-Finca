@@ -19,6 +19,7 @@ const StyleGuide = () => {
             <div className="space-y-3">
               <div className="font-serif text-4xl">{data.styleGuide.typography.serif}</div>
               <div className="font-sans text-lg">{data.styleGuide.typography.sans}</div>
+              <div className="font-script text-2xl text-charcoal/70">Mediterranean garden festival</div>
               <div className="text-xs uppercase tracking-[0.35em] text-olive">{data.styleGuide.typography.tracking}</div>
             </div>
           </div>
@@ -27,7 +28,7 @@ const StyleGuide = () => {
             <div className="flex flex-wrap gap-3">
               <button className="btn-primary">{data.styleGuide.buttons.primary}</button>
               <button className="btn-secondary">{data.styleGuide.buttons.secondary}</button>
-              <button className="btn-ghost bg-night-blue">{data.styleGuide.buttons.ghost}</button>
+              <button className="btn-ghost bg-charcoal">{data.styleGuide.buttons.ghost}</button>
             </div>
           </div>
         </div>
@@ -44,7 +45,7 @@ const StyleGuide = () => {
             <div className="text-xs uppercase tracking-[0.3em] text-charcoal/60">Primary</div>
           </div>
           <div className="card-soft space-y-3">
-            <div className="font-sans text-2xl uppercase tracking-[0.45em]">LA<br />FINCA<span className="text-old-gold">.</span></div>
+            <div className="font-serif text-2xl uppercase tracking-[0.35em]">LA<br />FINCA<span className="text-terracotta">.</span></div>
             <div className="text-xs uppercase tracking-[0.3em] text-charcoal/60">Stacked</div>
           </div>
           <div className="card-soft space-y-3">
@@ -59,10 +60,10 @@ const StyleGuide = () => {
         title={data.styleGuide.palette.title}
         subtitle={data.styleGuide.palette.subtitle}
       >
-        <div className="grid gap-4 md:grid-cols-4">
+        <div className="grid gap-4 md:grid-cols-5">
           {palette.map((color) => (
-            <div key={color.name} className="rounded-[28px] border border-charcoal/10 bg-off-white p-4">
-              <div className="h-24 rounded-2xl" style={{ backgroundColor: color.value }} />
+            <div key={color.name} className="rounded-[26px] border border-charcoal/10 bg-off-white p-4">
+              <div className="h-20 rounded-2xl" style={{ backgroundColor: color.value }} />
               <div className="mt-3 text-sm font-semibold">{color.name}</div>
               <div className="text-xs uppercase tracking-[0.2em] text-charcoal/60">{color.value}</div>
             </div>
@@ -81,7 +82,7 @@ const StyleGuide = () => {
             <h3 className="font-serif text-2xl">{data.styleGuide.components.cardTitle}</h3>
             <p className="text-sm text-charcoal/70">{data.styleGuide.components.cardBody}</p>
           </div>
-          <div className="rounded-[28px] border border-old-gold/40 bg-festival-glow p-6 text-off-white">
+          <div className="rounded-[26px] border border-terracotta/40 bg-festival-glow p-6 text-off-white">
             <div className="chip border-off-white/40 text-off-white/80">Night</div>
             <h3 className="mt-4 font-serif text-2xl">{data.styleGuide.components.festivalCardTitle}</h3>
             <p className="text-sm text-off-white/80">{data.styleGuide.components.festivalCardBody}</p>
